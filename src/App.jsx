@@ -311,6 +311,41 @@ export default function App() {
 
   return (
     <div style={{ minHeight: "100vh", background: "#0f0f0f", fontFamily: "'Georgia', serif", color: "#f5f0e8" }}>
+      {/* Marquee banner */}
+      <style>{`
+        @keyframes saveArtScroll {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
+      `}</style>
+      <div style={{
+        height: "34px", background: "#0f0f0f",
+        borderBottom: "1px solid #2a1512", overflow: "hidden",
+        display: "flex", alignItems: "center", whiteSpace: "nowrap",
+      }}>
+        <div style={{
+          display: "inline-flex", flexShrink: 0,
+          animation: "saveArtScroll 18s linear infinite",
+          willChange: "transform",
+        }}>
+          {Array.from({ length: 2 }).map((_, g) => (
+            <span key={g} aria-hidden={g === 1 ? "true" : undefined} style={{ display: "inline-flex", flexShrink: 0 }}>
+              {Array.from({ length: 8 }).map((_, i) => (
+                <span key={i} style={{
+                  fontSize: "16px", fontWeight: "bold", letterSpacing: "3px",
+                  textTransform: "uppercase", color: "#ff6b35",
+                  textShadow: "0 0 12px rgba(231,76,60,0.5)",
+                  padding: "0 32px",
+                }}>
+                  Save Art
+                  <span style={{ color: "#e74c3c", margin: "0 -16px 0 16px" }}>🍕</span>
+                </span>
+              ))}
+            </span>
+          ))}
+        </div>
+      </div>
+
       {/* Header */}
       <div style={{
         background: "linear-gradient(135deg, #c0392b, #e74c3c 50%, #ff6b35)",
