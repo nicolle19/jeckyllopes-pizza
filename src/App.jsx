@@ -337,8 +337,7 @@ export default function App() {
                   textShadow: "0 0 12px rgba(231,76,60,0.5)",
                   padding: "0 32px",
                 }}>
-                  Pizza Pizza
-                  <span style={{ color: "#e74c3c", margin: "0 -16px 0 16px" }}>🍕</span>
+                  🏃 Run 🍕 Pizza 🍺 Beer 🔄 Repeat
                 </span>
               ))}
             </span>
