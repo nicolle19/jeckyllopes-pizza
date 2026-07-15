@@ -325,7 +325,7 @@ export default function App() {
       }}>
         <div style={{
           display: "inline-flex", flexShrink: 0,
-          animation: "saveArtScroll 18s linear infinite",
+          animation: "saveArtScroll 30s linear infinite",
           willChange: "transform",
         }}>
           {Array.from({ length: 2 }).map((_, g) => (
